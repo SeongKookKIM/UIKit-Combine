@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040BF2E72C0987BA0051A497 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF2E62C0987BA0051A497 /* ResultViewController.swift */; };
 		04C5040E2C08A95400D8CF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5040D2C08A95400D8CF56 /* AppDelegate.swift */; };
 		04C504102C08A95400D8CF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5040F2C08A95400D8CF56 /* SceneDelegate.swift */; };
 		04C504122C08A95400D8CF56 /* QuizMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C504112C08A95400D8CF56 /* QuizMainController.swift */; };
@@ -16,11 +17,12 @@
 		04C504262C08B16300D8CF56 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C504252C08B16300D8CF56 /* Quiz.swift */; };
 		04C504292C08B2DC00D8CF56 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C504282C08B2DC00D8CF56 /* QuizList.swift */; };
 		04C5042B2C08B9CA00D8CF56 /* QuizListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5042A2C08B9CA00D8CF56 /* QuizListTVCell.swift */; };
-		04C5042D2C08CA1500D8CF56 /* MyQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5042C2C08CA1500D8CF56 /* MyQuizView.swift */; };
+		04C5042D2C08CA1500D8CF56 /* MyQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5042C2C08CA1500D8CF56 /* MyQuizViewController.swift */; };
 		04C5042F2C08DFC900D8CF56 /* MyQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5042E2C08DFC900D8CF56 /* MyQuizViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040BF2E62C0987BA0051A497 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		04C5040A2C08A95400D8CF56 /* CombineTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C5040D2C08A95400D8CF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C5040F2C08A95400D8CF56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +34,7 @@
 		04C504252C08B16300D8CF56 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		04C504282C08B2DC00D8CF56 /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		04C5042A2C08B9CA00D8CF56 /* QuizListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizListTVCell.swift; sourceTree = "<group>"; };
-		04C5042C2C08CA1500D8CF56 /* MyQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizView.swift; sourceTree = "<group>"; };
+		04C5042C2C08CA1500D8CF56 /* MyQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizViewController.swift; sourceTree = "<group>"; };
 		04C5042E2C08DFC900D8CF56 /* MyQuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuizViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				04C504112C08A95400D8CF56 /* QuizMainController.swift */,
-				04C5042C2C08CA1500D8CF56 /* MyQuizView.swift */,
+				04C5042C2C08CA1500D8CF56 /* MyQuizViewController.swift */,
+				040BF2E62C0987BA0051A497 /* ResultViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,10 +200,11 @@
 				04C504122C08A95400D8CF56 /* QuizMainController.swift in Sources */,
 				04C5040E2C08A95400D8CF56 /* AppDelegate.swift in Sources */,
 				04C5042F2C08DFC900D8CF56 /* MyQuizViewModel.swift in Sources */,
-				04C5042D2C08CA1500D8CF56 /* MyQuizView.swift in Sources */,
+				04C5042D2C08CA1500D8CF56 /* MyQuizViewController.swift in Sources */,
 				04C504262C08B16300D8CF56 /* Quiz.swift in Sources */,
 				04C5042B2C08B9CA00D8CF56 /* QuizListTVCell.swift in Sources */,
 				04C504102C08A95400D8CF56 /* SceneDelegate.swift in Sources */,
+				040BF2E72C0987BA0051A497 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

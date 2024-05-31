@@ -13,6 +13,10 @@ protocol QuizProtocol {
     var questions: [QuestionList] { get set }
 }
 
+struct QuizCount {
+    var count: Int = 0
+}
+
 struct QuestionList {
     let content: String
     let score: Int
@@ -28,26 +32,24 @@ class Quiz: QuizProtocol {
         self.questions = questions
     }
 }
-class Count {
-    var count: Int = 0
-}
 
 
-class QuizStore {
-    var quizListStore: [QuizProtocol] = [Quiz(questionAsk: "당신의 취향은?", questions: [QuestionList(content: "a1", score: 1),
-                                                                                   QuestionList(content: "b2", score: 2),
-                                                                                   QuestionList(content: "c3", score: 3),
-                                                                                   QuestionList(content: "d4", score: 4)]),
-                                         Quiz(questionAsk: "당신의 색깔은?", questions: [QuestionList(content: "aa1", score: 1),
-                                                                                   QuestionList(content: "bb2", score: 2),
-                                                                                   QuestionList(content: "cc3", score: 3),
-                                                                                   QuestionList(content: "dd4", score: 4)]),
-                                         Quiz(questionAsk: "당신의 모양은?", questions: [QuestionList(content: "aaa1", score: 1),
-                                                                                   QuestionList(content: "bbb2", score: 2),
-                                                                                   QuestionList(content: "ccc3", score: 3),
-                                                                                   QuestionList(content: "ddd4", score: 4)]),
-                                         Quiz(questionAsk: "당신의 핸드폰은?", questions: [QuestionList(content: "aaaa1", score: 1),
-                                                                                    QuestionList(content: "bbbb2", score: 2),
-                                                                                    QuestionList(content: "cccc3", score: 3),
-                                                                                    QuestionList(content: "dddd4", score: 4)]),]
+
+struct QuizStore {
+    var quizListStore: [QuizProtocol] = [Quiz(questionAsk: "1번 질문입니다.", questions: [QuestionList(content: "1번 답변", score: 20),
+                                                                                    QuestionList(content: "2번 답변", score: 0)]
+                                             ),
+                                         Quiz(questionAsk: "2번 질문입니다.", questions: [QuestionList(content: "1번 답변", score: 20),
+                                                                                    QuestionList(content: "2번 답변", score: 0)]
+                                             ),
+                                         Quiz(questionAsk: "3번 질문입니다.", questions: [QuestionList(content: "1번 답변", score: 20),
+                                                                                    QuestionList(content: "2번 답변", score: 0)]
+                                             ),
+                                         Quiz(questionAsk: "4번 질문입니다.", questions: [QuestionList(content: "1번 답변", score: 20),
+                                                                                    QuestionList(content: "2번 답변", score: 0)]
+                                             ),
+                                         Quiz(questionAsk: "5번 질문입니다.", questions: [QuestionList(content: "1번 답변", score: 20),
+                                                                                    QuestionList(content: "2번 답변", score: 0)]
+                                             )
+    ]
 }

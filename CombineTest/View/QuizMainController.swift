@@ -67,7 +67,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let myQuizView = MyQuizView()
+        let myQuizView = MyQuizViewController()
         
         switch indexPath.row {
         case 0:
