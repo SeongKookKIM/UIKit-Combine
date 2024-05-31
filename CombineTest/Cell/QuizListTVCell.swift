@@ -24,6 +24,14 @@ class QuizListTVCell: UITableViewCell {
         
         return stackView
     }()
+    
+    private lazy var uiImage: UIImageView = {
+       let uiImage = UIImageView()
+        uiImage.contentMode = .scaleAspectFit
+        uiImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        return uiImage
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -37,6 +45,7 @@ class QuizListTVCell: UITableViewCell {
     func setUpUI() {
         
         stackView.addSubview(titleLabel)
+        stackView.addSubview(uiImage)
         contentView.addSubview(stackView)
         
         NSLayoutConstraint.activate([
@@ -47,7 +56,13 @@ class QuizListTVCell: UITableViewCell {
             stackView.heightAnchor.constraint(equalToConstant: 150),
             
             titleLabel.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: stackView.centerYAnchor)
+            titleLabel.centerYAnchor.constraint(equalTo: stackView.centerYAnchor),
+            
+            uiImage.topAnchor.constraint(equalTo: stackView.topAnchor),
+            uiImage.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
+            uiImage.bottomAnchor.constraint(equalTo: stackView.bottomAnchor),
+            uiImage.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            
         ])
         
     }
@@ -57,6 +72,11 @@ class QuizListTVCell: UITableViewCell {
     func configure(item: QuizList) {
         titleLabel.text = item.quizTitle
         stackView.backgroundColor = item.BackgroundColor
+        if let imageName = item.backGroundImage {
+                uiImage.image = UIImage(named: imageName)
+            } else {
+                uiImage.image = nil
+            }
     }
     
 }

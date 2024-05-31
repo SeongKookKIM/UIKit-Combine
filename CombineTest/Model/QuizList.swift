@@ -11,16 +11,18 @@ import UIKit
 class QuizList {
     let quizTitle: String
     let BackgroundColor: UIColor
+    let backGroundImage: String?
     
-    init(quizTitle: String, BackgroundColor: UIColor) {
+    init(quizTitle: String, BackgroundColor: UIColor, backGroundImage: String?) {
         self.quizTitle = quizTitle
         self.BackgroundColor = BackgroundColor
+        self.backGroundImage = backGroundImage
     }
 }
 
 struct QuizListStore {
-    var quizListStore: [QuizList] = [QuizList(quizTitle: "1번", BackgroundColor: .black),
-                                     QuizList(quizTitle: "2번", BackgroundColor: .red),
-                                     QuizList(quizTitle: "3번", BackgroundColor: .blue),
-                                     QuizList(quizTitle: "4번", BackgroundColor: .brown)]
+    var quizListStore: [QuizList] = [QuizList(quizTitle: "T발력 테스트", BackgroundColor: .systemGray, backGroundImage: "test"),
+                                     QuizList(quizTitle: "2번", BackgroundColor: .red, backGroundImage: nil),
+                                     QuizList(quizTitle: "3번", BackgroundColor: .blue, backGroundImage: nil),
+                                     QuizList(quizTitle: "4번", BackgroundColor: .brown, backGroundImage: nil)]
 }
