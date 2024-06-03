@@ -20,19 +20,21 @@ class QuizListTVCell: UITableViewCell {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.layer.cornerRadius = 10
+        stackView.clipsToBounds = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         return stackView
     }()
     
     private lazy var uiImage: UIImageView = {
-       let uiImage = UIImageView()
-        uiImage.contentMode = .scaleAspectFit
+        let uiImage = UIImageView()
+
+        uiImage.clipsToBounds = true
         uiImage.translatesAutoresizingMaskIntoConstraints = false
         
         return uiImage
     }()
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpUI()
@@ -62,21 +64,22 @@ class QuizListTVCell: UITableViewCell {
             uiImage.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
             uiImage.bottomAnchor.constraint(equalTo: stackView.bottomAnchor),
             uiImage.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            uiImage.widthAnchor.constraint(equalTo: stackView.widthAnchor)
             
         ])
         
     }
-
+    
     
     // congifure
     func configure(item: QuizList) {
         titleLabel.text = item.quizTitle
         stackView.backgroundColor = item.BackgroundColor
         if let imageName = item.backGroundImage {
-                uiImage.image = UIImage(named: imageName)
-            } else {
-                uiImage.image = nil
-            }
+            uiImage.image = UIImage(named: imageName)
+        } else {
+            uiImage.image = nil
+        }
     }
     
 }
