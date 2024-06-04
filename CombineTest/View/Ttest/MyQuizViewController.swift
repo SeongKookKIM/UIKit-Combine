@@ -17,7 +17,10 @@ class MyQuizViewController: UIViewController {
         setupBindings()
     }
     
+    //SetUpUI
     private func setupUI() {
+        questionLabel.numberOfLines = 0
+        
         view.addSubview(questionLabel)
         view.addSubview(tableView)
         

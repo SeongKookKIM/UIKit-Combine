@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         setUpUI()
     }
     
+    // SetUpUI
     func setUpUI() {
         // TableView
         tableView.dataSource = self
@@ -66,6 +67,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    // IndexPath 마다 설정 다르게
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let myQuizView = MyQuizViewController()
         
